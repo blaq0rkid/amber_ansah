@@ -1,56 +1,54 @@
-<script>
-	export let segment;
-</script>
-
-<style>
-	nav {
-		border-bottom: 1px solid rgba(255,62,0,0.1);
-		font-weight: 300;
-		padding: 0 1em;
+<script lang="ts">
+	import {
+	  Collapse,
+	  Navbar,
+	  NavbarToggler,
+	  NavbarBrand,
+	  Nav,
+	  NavItem,
+	  NavLink,
+	  UncontrolledDropdown,
+	  DropdownToggle,
+	  DropdownMenu,
+	  DropdownItem
+	} from 'sveltestrap';
+  
+	let isOpen = false;
+  
+	function handleUpdate(event) {
+	  isOpen = event.detail.isOpen;
 	}
+  </script>
+  
 
-	ul {
-		margin: 0;
-		padding: 0;
-	}
-
-	/* clearfix */
-	ul::after {
-		content: '';
-		display: block;
-		clear: both;
-	}
-
-	li {
-		display: block;
-		float: left;
-	}
-
-	[aria-current] {
-		position: relative;
-		display: inline-block;
-	}
-
-	[aria-current]::after {
-		position: absolute;
-		content: '';
-		width: calc(100% - 1em);
-		height: 2px;
-		background-color: rgb(255,62,0);
-		display: block;
-		bottom: -1px;
-	}
-
-	a {
-		text-decoration: none;
-		padding: 1em 0.5em;
-		display: block;
-	}
-</style>
-
-<nav>
-	<ul>
-		<li><a aria-current="{segment === undefined ? 'page' : undefined}" href=".">home</a></li>
-		<li><a aria-current="{segment === 'about' ? 'page' : undefined}" href="about">about</a></li>
-	</ul>
-</nav>
+<svelte:head>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</svelte:head>
+  
+<Navbar color="light" light expand="md">
+	<NavbarBrand href="/">Amber Ansah</NavbarBrand>
+	<NavbarToggler on:click={() => (isOpen = !isOpen)} />
+	<Collapse {isOpen} navbar expand="md" on:update={handleUpdate}>
+	  <Nav class="ml-auto" navbar>
+		<NavItem>
+		  <NavLink href="videos">Videos</NavLink>
+		</NavItem>
+		<NavItem>
+			<NavLink href="products">Products</NavLink>
+		  </NavItem>
+		<NavItem>
+		  <NavLink href="tools">Tools</NavLink>
+		</NavItem>
+		<UncontrolledDropdown nav inNavbar>
+		  <DropdownToggle nav caret>Fun</DropdownToggle>
+		  <DropdownMenu right>
+			<DropdownItem href="boss">Boss Babe</DropdownItem>
+			<DropdownItem href="try">Try On Haul</DropdownItem>			
+		  </DropdownMenu>
+		</UncontrolledDropdown>
+		<NavItem>
+			<NavLink href="about">About Me</NavLink>
+		</NavItem>
+	  </Nav>
+	</Collapse>
+  </Navbar>
