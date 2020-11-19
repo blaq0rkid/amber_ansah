@@ -1,19 +1,14 @@
 <script lang="ts">
-    import { Button, Jumbotron } from 'sveltestrap';
-  </script>
-  
-  <Jumbotron>
-    <h1 class="display-3">Hello, world!</h1>
-    <p class="lead">
-      This is a simple hero unit, a simple Jumbotron-style component for calling
-      extra attention to featured content or information.
-    </p>
-    <hr class="my-2" />
-    <p>
-      It uses utility classes for typography and spacing to space content out
-      within the larger container.
-    </p>
-    <p class="lead">
-      <Button color="primary">Learn More</Button>
-    </p>
-  </Jumbotron>
+    import { Card } from 'sveltestrap';
+</script>
+
+<section>
+    <Card class="text-white">
+        <img class="card-img" src="https://www.naturalhairmag.com/wp-content/uploads/2018/06/amber.ansah-.jpg" alt="Card image">
+        <div class="card-img-overlay">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        <p class="card-text">Last updated 3 mins ago</p>
+        </div>
+    </Card>
+</section>

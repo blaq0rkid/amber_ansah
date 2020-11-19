@@ -25,11 +25,11 @@
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 </svelte:head>
   
-<Navbar color="light" light expand="md">
+<Navbar light expand="md fixed-top">
 	<NavbarBrand href="/">Amber Ansah</NavbarBrand>
 	<NavbarToggler on:click={() => (isOpen = !isOpen)} />
 	<Collapse {isOpen} navbar expand="md" on:update={handleUpdate}>
-	  <Nav class="ml-auto" navbar>
+	  <Nav class="ml-auto " navbar>
 		<NavItem>
 		  <NavLink href="videos">Videos</NavLink>
 		</NavItem>
