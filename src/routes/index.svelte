@@ -1,6 +1,6 @@
 <script>
 	import { Button, Col, Row } from 'sveltestrap/src';
-  </script>
+</script>
   
   <Row>
 	<Col>
