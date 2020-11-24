@@ -46,11 +46,14 @@
 <Navbar light expand="md fixed-top text-dark">
 	<NavbarBrand href="/">Amber Ansah</NavbarBrand>	
 <div class="icons">
-	<li><img src="https://cdn2.iconfinder.com/data/icons/black-white-social-media/32/youtube_online_social_media_tube-128.png">
+	<!-- svelte-ignore a11y-missing-attribute -->
+	<li><a href="https://www.youtube.com/c/AmberAnsah"><img src="https://cdn2.iconfinder.com/data/icons/black-white-social-media/32/youtube_online_social_media_tube-128.png"></a>
 	</li>
-	<li><img src="https://cdn1.iconfinder.com/data/icons/social-media-circle-7/512/Circled_Instagram_svg-128.png">
+	<!-- svelte-ignore a11y-missing-attribute -->
+	<li><a href="https://www.instagram.com/amber.ansah/"><img src="https://cdn1.iconfinder.com/data/icons/social-media-circle-7/512/Circled_Instagram_svg-128.png"></a>		
 	</li>
-	<li><img src="https://cdn2.iconfinder.com/data/icons/black-white-social-media/32/twitter_online_social_media-128.png">
+	<!-- svelte-ignore a11y-missing-attribute -->
+	<li><a href="https://twitter.com/AmberAnsah"><img src="https://cdn2.iconfinder.com/data/icons/black-white-social-media/32/twitter_online_social_media-128.png"></a>
 	</li>
 </div>
 
@@ -69,7 +72,7 @@
 		<UncontrolledDropdown nav inNavbar>
 		  <DropdownToggle nav caret>Fun</DropdownToggle>
 		  <DropdownMenu right>
-			<DropdownItem href="boss">Boss Babe</DropdownItem>
+			<DropdownItem href="boss">Boss Mom</DropdownItem>
 			<DropdownItem href="try">Try On Haul</DropdownItem>			
 		  </DropdownMenu>
 		</UncontrolledDropdown>
